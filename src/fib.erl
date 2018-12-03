@@ -2,7 +2,7 @@
 -export([fib/1]).
 
 
--type color():: red|green|blue.
+-type color():: red | green | blue.
 -record(state, {count :: integer(), color :: color()}).
 -type state() :: #state{}.
 
