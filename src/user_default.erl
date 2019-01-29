@@ -14,7 +14,7 @@ get_types(Mod) ->
 
             {ok, Specs, _} =                 dialyzer_utils:get_spec_info(Mod, Core, Records),
             lager:info("Specs ~p", [lager:pr(Specs, dialyzer_contracts)]),
-            {Records, Specs};
+            #{records => Records, specs => Specs};
 
         _ ->
             {error, not_found}
