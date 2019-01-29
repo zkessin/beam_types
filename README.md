@@ -39,3 +39,24 @@ Build
              []}}}
 
 ```
+
+
+A recursive type might look like this:
+
+```Erlang
+    {type,gb_tree_node,2} =>
+              {{gb_trees,
+                   {"gb_trees.erl",163},
+                   {type,163,union,
+                       [{atom,163,nil},
+                        {type,164,tuple,
+                            [{var,164,'K'},
+                             {var,164,'V'},
+                             {user_type,164,gb_tree_node,
+                                 [{var,164,'K'},{var,164,'V'}]},
+                             {user_type,164,gb_tree_node,
+                                 [{var,164,'K'},{var,164,'V'}]}]}]},
+                   ['K','V']},
+               any}
+
+```
